@@ -1,0 +1,755 @@
+/*!
+ * Project Name: Irresistible Colour
+ * Client: Irresistible Colour
+ * Author: Matthew Wallis
+ */
+
+
+/*******************************************
+ * SETUP
+ *******************************************/
+
+/* Box Model Hack */
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+       -moz-box-sizing: border-box; /* Firexfox */
+            box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+/*******************************************
+ * BASE STYLES
+ *******************************************/
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+/*******************************************
+ * LAYOUT
+ *******************************************/
+
+/* Center the container */
+.container {
+    width: 850px;
+    margin: auto;
+}
+
+header {
+    margin-top: 5px;
+}
+
+footer {
+
+}
+
+/*******************************************
+ * ADDITIONAL STYLES
+ *******************************************/
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.6em;
+    text-align: right;
+    color: #fff;
+    padding: 20px 20px 20px 0;
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+	margin-bottom: 0px;
+}
+h2{
+    text-align: right;
+    padding: 15px 25px 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 2em;
+    letter-spacing: 0.17em;
+	margin: 7px 0 25px 0;
+}
+h3 {
+	font-family: 'Dosis', sans-serif;
+	margin: 10px 0 10px 0;
+}
+p {
+	font-size: 0.8em;
+	font-family: arial, helvetica, sans-serif;
+	margin-bottom: 35px;
+}
+h3 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.4em;
+	font-weight: lighter;
+}
+h3 a:hover {
+	color: #d4d4d4;
+}
+h4 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+nav {
+	float: left;
+	padding: 10px 0;
+	background: #000;
+	width: 100%;
+}
+nav ul {
+	text-align: center;
+	list-style: none;
+	padding: 0 0 0 20px;
+}
+nav ul li {
+	float: left;
+	display: inline;
+	padding: 0 5px 0 5px;
+}
+nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #d4d4d4;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
+    padding: 3px 13px 0 13px;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+nav ul li a:hover {
+	border-right: 1px solid #d4d4d4;
+	border-left: 1px solid #d4d4d4;
+}
+nav ul li:nth-child(2) {
+	cursor: pointer;
+}
+nav ul li ul {
+	position: absolute;
+	margin-top: 10px;
+	padding-left: 0;
+	width: 175px;
+	z-index: 10;
+}
+nav ul li ul li {
+	display: block;
+/*	background-color: rgba(255, 255, 255, 0.5);*/
+/*	padding: 10px 30px;*/
+	font-size: 1em;
+	color: #000;
+	margin: 0;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	border-radius: 2px;
+}
+nav ul li ul li:last-child {
+	border-bottom: 1px solid #000;
+}
+nav ul li ul li a:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+nav ul li ul li a {
+	border: none;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 10px 30px;
+	font-size: 0.85em;
+	color: #000;
+	margin: 4px 0;
+	font-family: 'Josefin Sans', sans-serif;
+	width: 150px;
+}
+nav ul li ul li a:hover {
+	border: none;
+}
+input[type="text"] {
+  background: #f1f1f1;
+  border-radius: 3px;
+  border: 1px solid #d4d4d4;
+}
+textarea {
+  background: #f1f1f1;
+  border-radius: 3px;
+  border: 1px solid #d4d4d4;
+  height: 150px;
+  width: 345px;
+}
+input[type="text"]:focus {
+  background: #fafafa;
+  border-radius: 3px;
+  border: 1px solid #000;
+  outline: none;
+}
+textarea:focus {
+  background: #fafafa;
+  border: 1px solid #000;
+  outline: none;
+}
+legend {
+  padding-top: 30px;
+}
+label {
+  display: inline-block;
+}
+.make-up-menu, .menu2 {
+    list-style: none;
+    margin: 0;
+}
+.trans-bar nav ul li ul {
+	
+}
+.right-menu-still {
+	background: url('../img/TwoWomenHomePageFinal2.jpg') no-repeat;
+	-moz-box-shadow:    inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow:         inset 0 0 3px #000000;
+	height: 464px;
+	margin-bottom: 20px;
+}
+.right-menu {
+    background: url('../img/twoWomenHomePage.gif') no-repeat;
+    height: 464px;
+    -moz-box-shadow:    inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow:         inset 0 0 3px #000000;
+	margin-bottom: 20px;
+}
+.page-backs {
+	background-color: #fff;
+}
+.top-function {
+    background-color: #000;
+	height: 100px;
+}
+.main-nav {
+    text-align: center;
+    margin: 0;
+    padding: 10px 10px 15px 10px;
+}
+.make-up-menu {
+    margin-right: 5px;
+    padding-top: 310px;
+}
+.main-nav li {
+    padding-bottom: 15px;
+}
+.trans-bar {
+    width: 850px;
+    height: 50px;
+}
+.foot {
+  background-color: #fff;
+  width: 850px;
+  margin-bottom: 25px;
+  float: left;
+  position: relative;
+}
+.foot p {
+    color: #000;
+    padding-left: 10px;
+    float: left;
+    margin-top: 25px;
+}
+.product p {
+	width: 34%;
+	float: right;
+	font-family: arial, helvetica, sans-serif;
+	text-align: right;
+	font-size: .75em;
+	padding-right: 40px;
+    position: relative;
+}
+.fbtw {
+    display: inline;
+    float: right;
+    position: relative;
+    top: 190px;
+}
+.fbtw li {
+    list-style-type: none;
+    display: inline-block;
+}
+.fbtw ul {
+    padding: 30px;
+    margin: 0;
+}
+.fbtw3 {
+    display: inline;
+    float: right;
+    position: relative;
+    top: 307px;
+    left: 289px;
+}
+.fbtw3 li {
+    list-style-type: none;
+    display: inline-block;
+}
+.fbtw3 ul {
+    padding: 30px;
+    margin: 0;
+}
+.fbtw3 ul li a img {
+    height: 25px;
+    width: 25px;
+}
+.fbtw2 {
+    display: inline;
+    float: right;
+    position: relative;
+}
+.fbtw2 li {
+    list-style-type: none;
+    display: inline-block;
+}
+.fbtw2 ul {
+    padding: 30px;
+    margin: 0;
+}
+.fbtw2 ul li a img {
+    height: 25px;
+    width: 25px;
+}
+/*.flag {
+    float: left;
+    padding: 15px;
+}*/
+/*
+.left-make-up-menu li a {
+    font-size: 0.6em;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    padding: 3px 10px 1px 10px;
+    color: #fff;
+    background-color: #a105af;
+    float: left;
+    clear: both;
+    list-style-type: none;
+    display: inline-block;
+    -webkit-transform: skew(-20deg);
+       -moz-transform: skew(-20deg);
+         -o-transform: skew(-20deg);
+}
+.left-make-up-menu {
+    margin-right: 5px;
+    padding-top: 312px;
+*/
+}
+.product h2 {
+    text-align: right;
+	margin-bottom: 0;
+	margin-top: 30px;
+	padding-top: 20px;
+}
+.shade01 {
+	width: 75px;
+	height: 75px;
+	background-color: lightgray;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade02 {
+    width: 75px;
+	height: 75px;
+	background-color: red;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade03 {
+    width: 75px;
+	height: 75px;
+	background-color: pink;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade04 {
+    width: 75px;
+	height: 75px;
+	background-color: blue;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade05 {
+    width: 75px;
+	height: 75px;
+	background-color: green;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade06 {
+    width: 75px;
+	height: 75px;
+	background-color: brown;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade07 {
+    width: 75px;
+	height: 75px;
+	background-color: yellow;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade08 {
+    width: 75px;
+	height: 75px;
+	background-color: purple;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade09 {
+    width: 75px;
+	height: 75px;
+	background-color: orange;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade10 {
+	width: 75px;
+	height: 75px;
+	background-color: lightblue;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade11 {
+	width: 75px;
+	height: 75px;
+	background-color: olive;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade12 {
+	width: 75px;
+	height: 75px;
+	background-color: salmon;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade13 {
+	width: 75px;
+	height: 75px;
+	background-color: coral;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade14 {
+	width: 75px;
+	height: 75px;
+	background-color: darkorchid;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade15 {
+	width: 75px;
+	height: 75px;
+	background-color: firebrick;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade16 {
+	width: 75px;
+	height: 75px;
+	background-color: lavender;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade17 {
+	width: 75px;
+	height: 75px;
+	background-color: peru;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade18 {
+	width: 75px;
+	height: 75px;
+	background-color: rosybrown;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade19 {
+	width: 75px;
+	height: 75px;
+	background-color: wheat;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade20 {
+	width: 75px;
+	height: 75px;
+	background-color: bisque;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade21 {
+	width: 75px;
+	height: 75px;
+	background-color: cadetblue;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shade22 {
+	width: 75px;
+	height: 75px;
+	background-color: cornsilk;
+	border-radius: 15px;
+	position: relative;
+	left: 75px;
+	top: 18px;
+	float: left;
+}
+.shades {
+	position: relative;
+	float: left;
+	left: 10px;
+	top: 100px;
+}     
+.shades li a {
+    font-size: .8em;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+	padding: 2px 0;
+	cursor: pointer;
+}
+.shades li {
+    list-style-type: none;  
+    line-height: 18px;
+/*    font-family: 'Dosis';*/
+    letter-spacing: 0.1em;
+}
+/*
+.product-image-back {
+	border: 1px solid #000;
+	position: relative;
+}
+*/
+.top-image {
+	float: left;
+	clear: both;
+}
+.product {
+	position: relative;
+    z-index: -1;
+	margin-top: 20px;
+}
+.bottom-menu {
+	float: right;
+	position: relative;
+	right: 3px;
+	bottom: 22px;
+}
+.BgI {
+	float: left;
+}
+.product-image-back {
+	float: right;
+	height: 464px;
+}
+.shades ul {
+	padding: 0;
+}
+.gallery {
+	width: 850px;
+	position: relative;
+	top: 20px;
+	float: left;
+	clear: both;
+}
+.gallery ul li {
+	display: inline;
+	padding-top: 30px;
+	list-style-type: none;
+}
+.gallery ul li a img {
+	margin: 20px 60px 50px;
+	cursor: pointer;
+	border-radius: 3px;
+	box-shadow: 4px 4px 7px #A5A5A5;
+}
+.gallery ul li h4 {
+	text-align: center;
+	margin: 0;
+}
+.top-left-video {
+	float: left;
+	padding-left: 20px;
+}
+.top-right-video {
+	float: right;
+	padding-right: 20px;
+}
+.bottom-left-video {
+	float: left;
+	padding-left: 20px;
+}
+.bottom-right-video {
+	float: right;
+	padding-right: 20px;
+}
+#video {
+	padding: 0;
+}
+.about-field img {
+	float: left;
+	width: 14%;
+	box-shadow: 3px 3px 10px #d4d4d4;
+	margin: 20px;
+}
+.about-field {
+	margin: 100px 100px 10px 100px;
+}
+.trans-bar nav ul li ul li a {
+	border: none;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 10px 30px;
+	font-size: 0.85em;
+	color: #fff;
+	margin: 4px 0;
+	font-family: 'Josefin Sans', 'Times New Roman', sans-serif;
+	width: 150px;
+}
+.trans-bar nav ul li ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+/*
+form {
+	padding: 40px;
+	position: relative;
+	clear: both;
+}*/
+fieldset {
+  padding: 20px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  float: left;
+  width: 64%;
+  height: 400px;
+}
+.form-row {
+  display: block;
+  padding: 7px 0;	
+  margin-bottom: 10px;
+}
+.text-fields {
+  padding: 10px 0;
+}
+.email {
+  margin-bottom: 17px;
+}
+.contact-img {
+  float: right;
+  height: 464px;
+}
+.fbtw ul li a img {
+  height: 25px;
+  width: 25px;
+}
+.bottom-nav nav ul li {
+	display: inline;
+}
+.bottom-nav nav ul li a {
+	text-decoration: none;
+	color: #000;
+}
+.get-text {
+  float: left;
+  width: 50%;
+}
+.get-text p {
+  width: 80%;
+  padding-left: 70px;
+}
+.map {
+  float: right;
+  width: 50%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
